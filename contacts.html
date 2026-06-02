@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — Всё о космосе</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <h1>Свяжитесь с нами</h1>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="contacts.html" class="active">Контакты</a>
+    </nav>
+
+    <div class="content-section">
+
+        <div class="info-grid">
+            <div class="card">
+                <h3>Разработчик сайта</h3>
+                <p><strong>ФИО:</strong> Галкин Александр (Саша)</p>
+                <p><strong>Email:</strong> <a href="mail:kosmos@example.com">kosmos@example.com</a></p>
+                <p><strong>Специализация:</strong> Астрономия, космические исследования</p>
+                <p><strong>Локация:</strong> г. Москва, Россия</p>
+            </div>
+            <div class="card">
+                <h3>Социальные сети</h3>
+                <div class="social-links">
+                    <a href="#">Telegram</a>
+                    <a href="#">VKontakte</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <h2>Напишите нам</h2>
+        <form class="contact-form" id="contact-form">
+            <div class="form-group">
+                <label for="name">Имя</label>
+                <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="example@mail.com">
+            </div>
+            <div class="form-group">
+                <label for="subject">Тема сообщения</label>
+                <select id="subject" name="subject">
+                    <option value="question">Вопрос по проекту</option>
+                    <option value="other">Другое</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Ваше сообщение..."></textarea>
+            </div>
+            <div class="form-group form-group-checkbox">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="agree" required>
+                    <span>Согласен на обработку персональных данных</span>
+                </label>
+            </div>
+            <button type="submit" class="btn-submit">Отправить сообщение</button>
+        </form>
+
+        <section class="extra-info">
+            <h2>Полезная информация</h2>
+            <div class="info-grid">
+                <div class="card">
+                    <h3>График работы</h3>
+                    <p>Пн — Пт: 09:00 - 19:00</p>
+                    <p>Сб: 10:00 - 15:00</p>
+                    <p>Вс: Выходной</p>
+                </div>
+                <div class="card">
+                    <h3>FAQ</h3>
+                    <p><strong>Как быстро вы отвечаете?</strong><br>Обычно в течение 2-х рабочих часов.</p>
+                    <p><strong>Где посмотреть примеры?</strong><br>Перейдите в раздел «Галерея».</p>
+                </div>
+                <div class="card">
+                    <h3>Инструкция</h3>
+                    <p>Для быстрого ответа укажите в теме сообщения цель обращения и оставьте актуальный Email.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Галкин Саша. Все права защищены.</p>
+    </footer>
+</div>
+
+<script>
+document.getElementById("contact-form")?.addEventListener("submit", function (e) {
+  e.preventDefault();
+  alert("Спасибо! Сообщение принято (демонстрация формы).");
+});
+</script>
+</body>
+</html>

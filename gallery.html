@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Фотогалерея «Космос»</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body>
+    <header class="gallery-header">
+      <div class="header-content">
+        <h1><i class="fas fa-images"></i> Фотогалерея «Космос»</h1>
+        <p class="subtitle">
+          Коллекция изображений по теме: <span class="theme-name">Космос</span>
+        </p>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-grid">
+          <li>
+            <a href="index.html" class="nav-link"
+              ><i class="fas fa-home"></i> Главная</a
+            >
+          </li>
+          <li>
+            <a href="gallery.html" class="nav-link active"
+              ><i class="fas fa-camera"></i> Галерея</a
+            >
+          </li>
+          <li>
+            <a href="contacts.html" class="nav-link"
+              ><i class="fas fa-info-circle"></i>Контакты</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="gallery-container">
+      <div class="controls-panel">
+        <div class="stats">
+          <span class="stat-item">
+            <i class="fas fa-image"></i>
+            Изображений: <span id="image-counter">0</span>
+          </span>
+          <span class="stat-item">
+            <i class="fas fa-heart"></i>
+            Всего лайков: <span id="total-likes">0</span>
+          </span>
+        </div>
+        <div class="view-controls">
+          <button id="grid-view" class="view-btn active">
+            <i class="fas fa-th"></i> Сетка
+          </button>
+          <button id="list-view" class="view-btn">
+            <i class="fas fa-list"></i> Список
+          </button>
+        </div>
+      </div>
+
+      <div class="filters">
+        <h3><i class="fas fa-filter"></i> Фильтры:</h3>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">Все</button>
+          <button class="filter-btn" data-filter="nature">Природа</button>
+          <button class="filter-btn" data-filter="city">Город</button>
+          <button class="filter-btn" data-filter="people">Люди</button>
+          <button class="filter-btn" data-filter="space">Космос</button>
+        </div>
+      </div>
+
+      <div class="gallery-grid" id="image-gallery">
+        <article class="image-card" data-category="space">
+          <div class="card-image">
+            <img
+              src="images/space1.jpg"
+              alt="Млечный Путь над пустыней"
+              class="gallery-img"
+              loading="lazy"
+            />
+            <div class="image-overlay">
+              <button class="like-btn" data-id="1">
+                <i class="far fa-heart"></i>
+                <span class="like-count">0</span>
+              </button>
+              <button class="zoom-btn">
+                <i class="fas fa-expand"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="image-title">Млечный Путь над пустыней</h3>
+            <p class="image-date">
+              <i class="far fa-calendar"></i> 12 августа 2024
+            </p>
+            <p class="image-description">
+              Захватывающий вид Млечного Пути, снятый в пустыне.
+              Тысячи звёзд создают неповторимую картину ночного неба.
+            </p>
+            <div class="image-tags">
+              <span class="tag">космос</span>
+              <span class="tag">млечный путь</span>
+              <span class="tag">ночь</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="image-card" data-category="nature">
+          <div class="card-image">
+            <img
+              src="images/space2.jpg"
+              alt="Планета Юпитер и её спутники"
+              class="gallery-img"
+              loading="lazy"
+            />
+            <div class="image-overlay">
+              <button class="like-btn" data-id="2">
+                <i class="far fa-heart"></i>
+                <span class="like-count">0</span>
+              </button>
+              <button class="zoom-btn">
+                <i class="fas fa-expand"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="image-title">Юпитер и его спутники</h3>
+            <p class="image-date">
+              <i class="far fa-calendar"></i> 5 сентября 2024
+            </p>
+            <p class="image-description">
+              Снимок, сделанный телескопом: гигантский Юпитер и  его
+              крупнейшие спутники — Ио, Европа и Каллисто.
+            </p>
+            <div class="image-tags">
+              <span class="tag">космос</span>
+              <span class="tag">юпитер</span>
+              <span class="tag">спутники</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="image-card" data-category="space">
+          <div class="card-image">
+            <img
+              src="images/space3.jpg"
+              alt="Туманность Ориона"
+              class="gallery-img"
+              loading="lazy"
+            />
+            <div class="image-overlay">
+              <button class="like-btn" data-id="3">
+                <i class="far fa-heart"></i>
+                <span class="like-count">0</span>
+              </button>
+              <button class="zoom-btn">
+                <i class="fas fa-expand"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="image-title">Туманность Ориона</h3>
+            <p class="image-date">
+              <i class="far fa-calendar"></i> 20 октября 2024
+            </p>
+            <p class="image-description">
+              Одна из самых ярких туманностей. Здесь рождаются
+              новые звёзды, а газ и пыль образуют причудливые узоры.
+            </p>
+            <div class="image-tags">
+              <span class="tag">космос</span>
+              <span class="tag">туманность</span>
+              <span class="tag">орион</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="image-card" data-category="city">
+          <div class="card-image">
+            <img
+              src="images/space4.jpg"
+              alt="Космический корабль на орбите"
+              class="gallery-img"
+              loading="lazy"
+            />
+            <div class="image-overlay">
+              <button class="like-btn" data-id="4">
+                <i class="far fa-heart"></i>
+                <span class="like-count">0</span>
+              </button>
+              <button class="zoom-btn">
+                <i class="fas fa-expand"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="image-title">Космический корабль на орбите</h3>
+            <p class="image-date">
+              <i class="far fa-calendar"></i> 3 ноября 2024
+            </p>
+            <p class="image-description">
+              Вид космического корабля, находящегося на орбите Земли. На фоне — голубой шар нашей планеты.
+            </p>
+            <div class="image-tags">
+              <span class="tag">космос</span>
+              <span class="tag">космический корабль</span>
+              <span class="tag">орбита</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="image-card" data-category="people">
+          <div class="card-image">
+            <img
+              src="images/space5.jpg"
+              alt="Солнечное затмение"
+              class="gallery-img"
+              loading="lazy"
+            />
+            <div class="image-overlay">
+              <button class="like-btn" data-id="5">
+                <i class="far fa-heart"></i>
+                <span class="like-count">0</span>
+              </button>
+              <button class="zoom-btn">
+                <i class="fas fa-expand"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="image-title">Солнечное затмение</h3>
+            <p class="image-date">
+              <i class="far fa-calendar"></i> 8 апреля 2024
+            </p>
+            <p class="image-description">
+              Полное солнечное затмение: Луна полностью закрывает Солнце,
+              оставляя видимым только солнечную корону. Редкое и завораживающее
+              явление.
+            </p>
+            <div class="image-tags">
+              <span class="tag">космос</span>
+              <span class="tag">солнечное затмение</span>
+              <span class="tag">солнце</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="image-card" data-category="space">
+          <div class="card-image">
+            <img
+              src="images/space6.jpg"
+              alt="Галактика Андромеды"
+              class="gallery-img"
+              loading="lazy"
+            />
+            <div class="image-overlay">
+              <button class="like-btn" data-id="6">
+                <i class="far fa-heart"></i>
+                <span class="like-count">0</span>
+              </button>
+              <button class="zoom-btn">
+                <i class="fas fa-expand"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="image-title">Галактика Андромеды</h3>
+            <p class="image-date">
+              <i class="far fa-calendar"></i> 15 декабря 2024
+            </p>
+            <p class="image-description">
+              Одна из ближайших к нам галактик. На снимке видны спиральные
+              рукава и яркое ядро. Расстояние до неё — около 2,5 млн световых
+              лет.
+            </p>
+            <div class="image-tags">
+              <span class="tag">космос</span>
+              <span class="tag">галактика</span>
+              <span class="tag">андромеда</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <aside class="gallery-info">
+        <h3><i class="fas fa-lightbulb"></i> Интересный факт</h3>
+        <p>
+          Свет от Солнца до Земли идёт 8 минут 20 секунд. Это значит, что когда
+          мы смотрим на Солнце, мы видим его таким, каким оно было более восьми
+          минут назад.
+        </p>
+      </aside>
+    </main>
+
+    <footer class="gallery-footer">
+      <div class="footer-content">
+        <p>
+          &copy; <span id="current-year">2026</span> Галкин Саша. Все права
+          защищены.
+        </p>
+        <p class="js-status">JavaScript загружен и работает!</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
